@@ -39,5 +39,44 @@ class LinkedList {
         }
         return length;
     }
+    at(index) {
+        if (!this.head) {
+            throw new Error('index out of scope');
+        }
+        let counter = 0;
+        let node = this.head;
+        while (node) {
+            if (counter === index) {
+                return node;
+            }
+            counter++;
+            node = node.next;
+        }
+        throw new Error('index out of scope');
+    }
+    compare(leftIndex, rightIndex) {
+        if (!this.head) {
+            throw new Error('empty list');
+        }
+        return this.at(leftIndex).data > this.at(rightIndex).data;
+    }
+    swap(leftIndex, rightIndex) {
+        const leftNode = this.at(leftIndex);
+        const rightNode = this.at(rightIndex);
+        const leftHand = leftNode.data;
+        leftNode.data = rightNode.data;
+        rightNode.data = leftHand;
+    }
+    print() {
+        if (!this.head) {
+            console.log('empty list');
+            return;
+        }
+        let node = this.head;
+        while (node) {
+            console.log(node.data);
+            node = node.next;
+        }
+    }
 }
 exports.LinkedList = LinkedList;
