@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Sorter_1 = require("./Sorter");
+const NumbersCollection_1 = require("./NumbersCollection");
+const StringCollection_1 = require("./StringCollection");
+StringCollection_1.StringCollection;
+const newNumCol = new NumbersCollection_1.NumbersCollection([10, 3, -2, -10]);
+const newStrCol = new StringCollection_1.StringCollection('tEstinGbeSt');
+// console.log(newNumCol.length);
+// console.log(newNumCol.data);
+const sorter = new Sorter_1.Sorter(newNumCol);
+const sorterStr = new Sorter_1.Sorter(newStrCol);
+sorterStr.sort();
+sorter.sort();
+console.log(newNumCol.data);
+console.log(newStrCol.data);

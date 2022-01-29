@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "name": "p2-noname",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:build": "npx tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
