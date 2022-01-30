@@ -14,12 +14,21 @@ StringCollection;
 // sorterStr.sort();
 // console.log(newStrCol.data);
 
+// const newLinkedList = new LinkedList();
+// newLinkedList.add(500);
+// newLinkedList.add(-20);
+// newLinkedList.add(30);
+// newLinkedList.add(-100);
+// newLinkedList.add(99);
+// const sorter = new Sorter(newLinkedList);
+// sorter.sort();
+// newLinkedList.print();
+
 const newLinkedList = new LinkedList();
 newLinkedList.add(500);
 newLinkedList.add(-20);
 newLinkedList.add(30);
 newLinkedList.add(-100);
 newLinkedList.add(99);
-const sorter = new Sorter(newLinkedList);
-sorter.sort();
+newLinkedList.sort();
 newLinkedList.print();
